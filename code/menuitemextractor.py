@@ -20,8 +20,15 @@ def clean_scraped_text(scraped_text: str) -> list[str]:
     return clean_text_list
 
 def extract_menu_item(title:str, scraped_text: str) -> MenuItem:
-    clean_scraped_text = clean_scraped_text(scraped_text)
-    return MenuItem
+    clean_text = clean_scraped_text(scraped_text)
+    item = MenuItem(category=title, name="", price=0.0, description="")
+    item.name = clean_text[0]
+    item.price = clean_price(clean_text[1])
+    if len(clean_text) > 2:
+        item.description = clean_text[2]
+    else:
+        item.description = "No description available."
+    return item
 
 
 
