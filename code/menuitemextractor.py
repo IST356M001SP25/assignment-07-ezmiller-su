@@ -7,13 +7,21 @@ else:
 
 
 def clean_price(price:str) -> float:
-    pass # TODO  replace with code
+    price = price.replace('$','').replace(',','')
+    return float(price)
 
 def clean_scraped_text(scraped_text: str) -> list[str]:
-    pass # TODO  replace with code
+    scraped_text_list = scraped_text.split('\n')
+    clean_text_list = []
+    unwanted_text = ['NEW!', 'NEW', "S", "V", "GS", "P", '']
+    for x in scraped_text_list:
+        if x not in unwanted_text:
+            clean_text_list.append(x)
+    return clean_text_list
 
 def extract_menu_item(title:str, scraped_text: str) -> MenuItem:
-    pass # TODO  replace with code
+    clean_scraped_text = clean_scraped_text(scraped_text)
+    return MenuItem
 
 
 
