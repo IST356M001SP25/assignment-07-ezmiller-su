@@ -12,6 +12,9 @@ def tullyscraper(playwright: Playwright) -> None:
 
     # TODO Write code here
     
+    
+    extract_menu_item(page)
+    return 
     # ---------------------
     context.close()
     browser.close()
