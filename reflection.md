@@ -23,3 +23,4 @@ Examples:
 
 `--- Reflection Below This Line ---`
 
+This was a good learning experience for me. I had trouble with the final step, running the tests to check that the tully_scraper had worked. For some reason, the code wouldn't import the menuitemextractor or menuitem into the file, so I had to comment those imports out, and paste in the code. This enabled the file to run.
